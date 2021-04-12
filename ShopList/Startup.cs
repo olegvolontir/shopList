@@ -14,6 +14,9 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using ShopList.Models.Database;
+using ShopList.Models.Database.Entities; 
+using ShopList.Repositories;
+using ShopList.Services;
 
 namespace ShopList
 {
@@ -31,7 +34,15 @@ namespace ShopList
         {
             services.AddDbContext<ShopDbContext>(o => o.UseSqlServer(
                 Configuration.GetConnectionString("ShopDb")));
-            services.AddControllers();
+
+            services.AddScoped<ProductEntityRepository>();
+
+            services.AddScoped<ProductEntityService>();
+
+
+            services.AddControllers().AddNewtonsoftJson(x =>
+                x.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ShopList", Version = "v1" });
