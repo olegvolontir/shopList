@@ -23,15 +23,15 @@ namespace ShopList.Services
             return result;
         }
 
-        //public async Task<List<ProductEntity>> Search(string text)
-        //{
-        //    return await _productEntityRepository.Search(text);
-        //}
+        public async Task<List<ProductEntity>> Search(string text)
+        {
+            return await _productEntityRepository.Search(text);
+        }
 
-        //public async Task<bool> Delete(int id)
-        //{
-        //    return await _productEntityRepository.Delete(id);
-        //}
+        public async Task<bool> Delete(int id)
+        {
+            return await _productEntityRepository.Delete(id);
+        }
 
        
         public async Task<ProductEntity> GetById(int id)
@@ -39,15 +39,11 @@ namespace ShopList.Services
             return await _productEntityRepository.GetById(id);
         }
 
-        public async Task<List<ProductEntity>> GetAll()
-        {
-            return await _productEntityRepository.GetAll();
-        }
 
-        //public async Task<ProductEntity> Update(ProductEntity product)
-        //{
-        //    return await _productEntityRepository.Update(product);
-        //}
+        public async Task<ProductEntity> Update(ProductEntity product)
+        {
+            return await _productEntityRepository.Update(product);
+        }
 
     }
 }
