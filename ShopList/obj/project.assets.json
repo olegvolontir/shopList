@@ -7480,19 +7480,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\emasu\\.nuget\\packages\\": {}
+    "C:\\Users\\oovolontir\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\emasu\\Desktop\\DAC\\Proiect-.Net\\shopList\\ShopList\\ShopList.csproj",
+      "projectUniqueName": "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\shopList\\ShopList\\ShopList.csproj",
       "projectName": "ShopList",
-      "projectPath": "C:\\Users\\emasu\\Desktop\\DAC\\Proiect-.Net\\shopList\\ShopList\\ShopList.csproj",
-      "packagesPath": "C:\\Users\\emasu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\emasu\\Desktop\\DAC\\Proiect-.Net\\shopList\\ShopList\\obj\\",
+      "projectPath": "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\shopList\\ShopList\\ShopList.csproj",
+      "packagesPath": "C:\\Users\\oovolontir\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\shopList\\ShopList\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\emasu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\oovolontir\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -18,28 +18,32 @@ namespace ShopList.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task<List<ProductEntity>> Search(string text)
+        //public async Task<List<ProductEntity>> Search(string text)
+        //{
+        //    return await _dbContext.Products
+        //        .Where(p => p.Name.Contains(text))
+        //        .ToListAsync();
+        //}
+
+        //public async Task<bool> Delete(int id)
+        //{
+        //    var product = await GetById(id);
+
+        //    if (product != null)
+        //    {
+        //        _dbContext.Products.Remove(product);
+        //        await _dbContext.SaveChangesAsync();
+        //        return true;
+        //    }
+
+        //    return false;
+        //}
+
+        public async Task<List<ProductEntity>> GetAll()
         {
-            return await _dbContext.Products
-                .Where(p => p.Name.Contains(text))
-                .ToListAsync();
+            var result = await _dbContext.Products.ToListAsync();
+            return result;
         }
-
-        public async Task<bool> Delete(int id)
-        {
-            var product = await GetById(id);
-
-            if (product != null)
-            {
-                _dbContext.Products.Remove(product);
-                await _dbContext.SaveChangesAsync();
-                return true;
-            }
-
-            return false;
-        }
-
-        
 
         public async Task<ProductEntity> GetById(int id)
         {
@@ -47,12 +51,12 @@ namespace ShopList.Repositories
             return result;
         }
 
-        public async Task<ProductEntity> Update(ProductEntity product)
-        {
-            var result = _dbContext.Products.Update(product);
-            await _dbContext.SaveChangesAsync();
-            return result.Entity;
-        }
+        //public async Task<ProductEntity> Update(ProductEntity product)
+        //{
+        //    var result = _dbContext.Products.Update(product);
+        //    await _dbContext.SaveChangesAsync();
+        //    return result.Entity;
+        //}
 
         public async Task<ProductEntity> Insert(ProductEntity product)
         {
