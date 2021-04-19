@@ -11,7 +11,6 @@ C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Micro
 C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\obj\Debug\net5.0\ShopList.csprojAssemblyReference.cache
 C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\obj\Debug\net5.0\ShopList.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\obj\Debug\net5.0\ShopList.AssemblyInfoInputs.cache
 C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\obj\Debug\net5.0\ShopList.AssemblyInfo.cs
