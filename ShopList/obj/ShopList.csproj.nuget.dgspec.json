@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\ShopList\\ShopList\\ShopList.csproj": {}
+    "C:\\Users\\emasu\\Desktop\\DAC\\Proiect-.Net\\shopList\\ShopList\\ShopList.csproj": {}
   },
   "projects": {
-    "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\ShopList\\ShopList\\ShopList.csproj": {
+    "C:\\Users\\emasu\\Desktop\\DAC\\Proiect-.Net\\shopList\\ShopList\\ShopList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\ShopList\\ShopList\\ShopList.csproj",
+        "projectUniqueName": "C:\\Users\\emasu\\Desktop\\DAC\\Proiect-.Net\\shopList\\ShopList\\ShopList.csproj",
         "projectName": "ShopList",
-        "projectPath": "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\ShopList\\ShopList\\ShopList.csproj",
-        "packagesPath": "C:\\Users\\oovolontir\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\ShopList\\ShopList\\obj\\",
+        "projectPath": "C:\\Users\\emasu\\Desktop\\DAC\\Proiect-.Net\\shopList\\ShopList\\ShopList.csproj",
+        "packagesPath": "C:\\Users\\emasu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emasu\\Desktop\\DAC\\Proiect-.Net\\shopList\\ShopList\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\oovolontir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\emasu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

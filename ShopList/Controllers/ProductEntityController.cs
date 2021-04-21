@@ -19,10 +19,10 @@ namespace ShopList.Controllers
             _productEntityService = productEntityService;
         }
 
-        [HttpGet("{listId}")]
+        [HttpGet("{productId}")]
         public async Task<ObjectResult> GetById([FromRoute] int productId)
         {
-            return Ok(await _productEntityService.GetById(productId));
+            return Ok(await _productEntityService.Get(p => p.Id == productId));
         }
 
         [HttpPut]
@@ -31,16 +31,12 @@ namespace ShopList.Controllers
             return Ok(await _productEntityService.Update(product));
         }
 
-        [HttpDelete("{listId}")]
-        public async Task<ObjectResult> DeleteProduct([FromRoute] int productId)
-        {
-            return Ok(await _productEntityService.Delete(productId));
-        }
+        
 
         [HttpPost]
         public async Task<ObjectResult> CreateProduct([FromBody] ProductEntity product)
         {
-            return Ok(await _productEntityService.CreateProduct(product));
+            return Ok(await _productEntityService.Create(product));
         }
     }
 }
