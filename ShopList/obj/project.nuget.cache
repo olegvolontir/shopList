@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fhtq0bCsagD5yZtWR6c/HsynkGtENa+z03FQnwAzn55rMsdd5xFrEf/2E6d++nNVvSrCIlOBpjxNsOkiogKmTQ==",
+  "dgSpecHash": "2I9rVsm+8q2dKPe9Zp+bVjFQ07xYezzDMuneOA1UYfYNvupSh/G8UhtIpGok51Xon0sGuYj64safQXFFMkdH/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\shopList\\ShopList\\ShopList.csproj",
+  "projectFilePath": "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\ShopList\\ShopList\\ShopList.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\oovolontir\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\oovolontir\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.5\\microsoft.aspnetcore.jsonpatch.5.0.5.nupkg.sha512",
