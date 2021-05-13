@@ -14,7 +14,6 @@ namespace ShopList.Models.Database
         }
 
         public DbSet<ProductEntity> Products { get; set; }
-        public DbSet<CartEntity> Cart { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

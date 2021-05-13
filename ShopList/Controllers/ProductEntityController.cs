@@ -22,7 +22,7 @@ namespace ShopList.Controllers
         [HttpGet("{productId}")]
         public async Task<ObjectResult> GetById([FromRoute] int productId)
         {
-            return Ok(await _productEntityService.Get(p => p.Id == productId));
+            return Ok(await _productEntityService.GetById(productId));
         }
 
         [HttpPut]
@@ -31,12 +31,16 @@ namespace ShopList.Controllers
             return Ok(await _productEntityService.Update(product));
         }
 
-        
+        [HttpDelete("{productId}")]
+        public async Task<ObjectResult> DeleteProduct([FromRoute] int productId)
+        {
+            return Ok(await _productEntityService.Delete(productId));
+        }
 
         [HttpPost]
         public async Task<ObjectResult> CreateProduct([FromBody] ProductEntity product)
         {
-            return Ok(await _productEntityService.Create(product));
+            return Ok(await _productEntityService.CreateProduct(product));
         }
     }
 }
