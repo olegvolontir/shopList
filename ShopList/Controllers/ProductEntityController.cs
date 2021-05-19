@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using ShopList.Services;
 using ShopList.Models.Database.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ShopList.Controllers
 {
@@ -19,24 +17,28 @@ namespace ShopList.Controllers
             _productEntityService = productEntityService;
         }
 
+        [Authorize(Roles = "Normal")]
         [HttpGet("{productId}")]
         public async Task<ObjectResult> GetById([FromRoute] int productId)
         {
             return Ok(await _productEntityService.Get(p => p.Id == productId));
         }
 
+        [Authorize(Roles = "Moderator")]
         [HttpPut]
         public async Task<ObjectResult> UpdateProduct([FromBody] ProductEntity product)
         {
             return Ok(await _productEntityService.Update(product));
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<ObjectResult> CreateProduct([FromBody] ProductEntity product)
         {
             return Ok(await _productEntityService.Create(product));
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{productId}")]
         public async Task<ObjectResult> DeleteProduct([FromRoute] int productId)
         {

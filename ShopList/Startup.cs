@@ -14,6 +14,7 @@ using ShopList.Models.Database.Entities;
 using ShopList.Repositories;
 using ShopList.Services;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace ShopList
 {
@@ -51,9 +52,38 @@ namespace ShopList
                .AddEntityFrameworkStores<ShopDbContext>()
                .AddDefaultTokenProviders();
 
+            services.AddAuthorization()
+                .AddAuthentication(o =>
+                {
+                    o.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    o.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+                    o.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                })
+                .AddJwtBearer(o =>
+                {
+                    o.RequireHttpsMetadata = false;
+                    o.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidIssuer = "https://shoplist.ro",
+                        ValidAudience = "https://shoplist.ro",
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
+                            @"hfwehdfuhf0jf-23jd9-83u9830ffjn4jffkerfj4j32f9043jfjifjrefjre")),
+                        ClockSkew = TimeSpan.Zero
+                    };
+                });
+
+
             services.AddScoped<ProductEntityRepository>();
 
             services.AddScoped<ProductEntityService>();
+
+            services.AddScoped<CartEntityRepository>();
+
+            services.AddScoped<CartEntityService>();
+
+            services.AddScoped<UserRepository>();
+
+            services.AddScoped<UserService>();
 
             services.AddControllers().AddNewtonsoftJson(x =>
                 x.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);

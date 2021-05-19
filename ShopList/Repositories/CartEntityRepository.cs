@@ -9,13 +9,17 @@ using ShopList.Models.Database.Entities;
 
 namespace ShopList.Repositories
 {
-    public class CartEntityRepository:BaseRepository<CartEntity>
+    public class CartEntityRepository : BaseRepository<CartEntity>
     {
-        private readonly ShopDbContext _dbContext;
-
         public CartEntityRepository(ShopDbContext dbContext):base (dbContext)
+        {         
+        }
+
+        public async Task<List<CartEntity>> Search(int userId)
         {
-            
+            return await Table
+                .Where(c => c.User.Id == userId)
+                .ToListAsync();
         }
     }
 }

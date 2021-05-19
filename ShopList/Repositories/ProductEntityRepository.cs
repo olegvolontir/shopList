@@ -11,15 +11,13 @@ namespace ShopList.Repositories
 {
     public class ProductEntityRepository:BaseRepository<ProductEntity>
     {
-        private readonly ShopDbContext _dbContext;
-
         public ProductEntityRepository(ShopDbContext dbContext):base (dbContext)
         {
         }
 
         public async Task<List<ProductEntity>> Search(string text)
         {
-            return await _dbContext.Products
+            return await Table
                 .Where(p => p.Name.Contains(text))
                 .ToListAsync();
         }
