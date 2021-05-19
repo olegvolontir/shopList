@@ -10,7 +10,7 @@ using ShopList.Models.Database;
 namespace ShopList.Migrations
 {
     [DbContext(typeof(ShopDbContext))]
-    [Migration("20210519124849_CartProduct")]
+    [Migration("20210519131635_CartProduct")]
     partial class CartProduct
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

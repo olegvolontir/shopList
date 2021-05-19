@@ -137,3 +137,10 @@ C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Micro
 C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
