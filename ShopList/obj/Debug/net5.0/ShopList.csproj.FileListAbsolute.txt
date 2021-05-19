@@ -130,3 +130,10 @@ C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopL
 C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.genruntimeconfig.cache
 C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.csprojAssemblyReference.cache
 C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\obj\Debug\net5.0\ShopList.csprojAssemblyReference.cache
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll

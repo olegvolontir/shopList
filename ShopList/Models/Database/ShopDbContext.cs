@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using ShopList.Models.Database.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace ShopList.Models.Database
 {
-    public class ShopDbContext : DbContext 
+    public class ShopDbContext : 
+        IdentityDbContext<UserEntity, RoleEntity, int, IdentityUserClaim<int>, UserRoleEntity,
+        IdentityUserLogin<int>, IdentityRoleClaim<int>, IdentityUserToken<int>>
     {
         public ShopDbContext(DbContextOptions<ShopDbContext> options) : base(options)
         {
@@ -19,6 +19,30 @@ namespace ShopList.Models.Database
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<UserEntity>()
+                .HasMany(e => e.UserRoles)
+                .WithOne(e => e.User)
+                .HasForeignKey(ur => ur.UserId)
+                .IsRequired();
+
+            modelBuilder.Entity<RoleEntity>()
+                .HasMany(e => e.UserRoles)
+                .WithOne(e => e.Role)
+                .HasForeignKey(ur => ur.RoleId)
+                .IsRequired();
+
+            modelBuilder.Entity<ProductEntity>()
+                .HasMany(cp => cp.CartProducts)
+                .WithOne(cp => cp.Product)
+                .HasForeignKey(p => p.Id)
+                .IsRequired();
+
+            modelBuilder.Entity<CartEntity>()
+                .HasMany(cp => cp.CartProducts)
+                .WithOne(cp => cp.Cart)
+                .HasForeignKey(c => c.Id)
+                .IsRequired();
         }
     }
 }

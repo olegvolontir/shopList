@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ShopList.Models.Database;
 
 namespace ShopList.Migrations
 {
     [DbContext(typeof(ShopDbContext))]
-    partial class ShopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210513090803_AddedUsers")]
+    partial class AddedUsers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -127,46 +129,9 @@ namespace ShopList.Migrations
                     b.Property<int>("ModifiedBy")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("cart");
-                });
-
-            modelBuilder.Entity("ShopList.Models.Database.Entities.CartProductEntity", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<int?>("CartId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CreatedBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("DateCreated")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("DateModified")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("ModifiedBy")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ProductId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("cart_product");
                 });
 
             modelBuilder.Entity("ShopList.Models.Database.Entities.ProductEntity", b =>
@@ -175,6 +140,9 @@ namespace ShopList.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("CartEntityId")
+                        .HasColumnType("int");
 
                     b.Property<int>("CreatedBy")
                         .HasColumnType("int");
@@ -198,6 +166,8 @@ namespace ShopList.Migrations
                         .HasColumnType("real");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CartEntityId");
 
                     b.ToTable("product");
                 });
@@ -367,32 +337,11 @@ namespace ShopList.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("ShopList.Models.Database.Entities.CartEntity", b =>
+            modelBuilder.Entity("ShopList.Models.Database.Entities.ProductEntity", b =>
                 {
-                    b.HasOne("ShopList.Models.Database.Entities.UserEntity", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("ShopList.Models.Database.Entities.CartProductEntity", b =>
-                {
-                    b.HasOne("ShopList.Models.Database.Entities.CartEntity", "Cart")
-                        .WithMany("CartProducts")
-                        .HasForeignKey("Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ShopList.Models.Database.Entities.ProductEntity", "Product")
-                        .WithMany("CartProducts")
-                        .HasForeignKey("Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Cart");
-
-                    b.Navigation("Product");
+                    b.HasOne("ShopList.Models.Database.Entities.CartEntity", null)
+                        .WithMany("ListProducts")
+                        .HasForeignKey("CartEntityId");
                 });
 
             modelBuilder.Entity("ShopList.Models.Database.Entities.UserRoleEntity", b =>
@@ -416,12 +365,7 @@ namespace ShopList.Migrations
 
             modelBuilder.Entity("ShopList.Models.Database.Entities.CartEntity", b =>
                 {
-                    b.Navigation("CartProducts");
-                });
-
-            modelBuilder.Entity("ShopList.Models.Database.Entities.ProductEntity", b =>
-                {
-                    b.Navigation("CartProducts");
+                    b.Navigation("ListProducts");
                 });
 
             modelBuilder.Entity("ShopList.Models.Database.Entities.RoleEntity", b =>

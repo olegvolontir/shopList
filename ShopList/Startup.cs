@@ -1,22 +1,19 @@
+using System;
+using System.Text;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json;
 using ShopList.Models.Database;
-using ShopList.Models.Database.Entities; 
+using ShopList.Models.Database.Entities;
 using ShopList.Repositories;
 using ShopList.Services;
+using Newtonsoft.Json;
 
 namespace ShopList
 {
@@ -32,13 +29,31 @@ namespace ShopList
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHttpContextAccessor();
+
             services.AddDbContext<ShopDbContext>(o => o.UseSqlServer(
                 Configuration.GetConnectionString("ShopDb")));
+
+            services.AddIdentity<UserEntity, RoleEntity>(options =>
+            {
+                options.SignIn.RequireConfirmedAccount = false;
+                options.SignIn.RequireConfirmedEmail = false;
+                options.SignIn.RequireConfirmedPhoneNumber = false;
+
+                options.Password.RequiredLength = 4;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+
+                options.Lockout.AllowedForNewUsers = true;
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(2d);
+                options.Lockout.MaxFailedAccessAttempts = 10;
+            })
+               .AddEntityFrameworkStores<ShopDbContext>()
+               .AddDefaultTokenProviders();
 
             services.AddScoped<ProductEntityRepository>();
 
             services.AddScoped<ProductEntityService>();
-
 
             services.AddControllers().AddNewtonsoftJson(x =>
                 x.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
@@ -63,6 +78,7 @@ namespace ShopList
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

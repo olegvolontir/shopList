@@ -9,6 +9,7 @@ namespace ShopList.Models.Database.Entities
     [Table("cart")]
     public class CartEntity:BaseEntity
     {
-        public List<ProductEntity> ListProducts { get; set; }
+        [ForeignKey("UserId")]public UserEntity User { get; set; }
+        public List<CartProductEntity> CartProducts { get; set; }
     }
 }

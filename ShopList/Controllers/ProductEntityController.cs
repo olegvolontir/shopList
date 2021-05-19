@@ -36,5 +36,13 @@ namespace ShopList.Controllers
         {
             return Ok(await _productEntityService.Create(product));
         }
+
+        [HttpDelete("{productId}")]
+        public async Task<ObjectResult> DeleteProduct([FromRoute] int productId)
+        {
+            var result = await _productEntityService.Get(p => p.Id == productId);
+
+            return Ok(await _productEntityService.Delete(result));
+        }
     }
 }
