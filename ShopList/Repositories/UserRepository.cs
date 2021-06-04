@@ -5,8 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ShopList.Models.Database;
 using ShopList.Models.Database.Entities;
+using ShopList.Models.Constants;
 using SignInResult = Microsoft.AspNetCore.Identity.SignInResult;
-
+using System;
 
 namespace ShopList.Repositories
 {
@@ -27,6 +28,7 @@ namespace ShopList.Repositories
 
         public async Task<IdentityResult> Register(UserEntity user, string password)
         {
+
             return await _userManager.CreateAsync(user, password);
         }
 
@@ -37,6 +39,18 @@ namespace ShopList.Repositories
 
         public async Task<IdentityResult> AddRoleToUser(UserEntity user, string role)
         {
+            if(role==UserRoles.administrator && !await _roleManager.RoleExistsAsync(role))
+            {
+                 await _roleManager.CreateAsync(new RoleEntity() { Name=role});
+            }
+            if (role == UserRoles.moderator && !await  _roleManager.RoleExistsAsync(role))
+            {
+                await _roleManager.CreateAsync(new RoleEntity() { Name = role });
+            }
+            if (role == UserRoles.normal && !await _roleManager.RoleExistsAsync(role))
+            {
+                await _roleManager.CreateAsync(new RoleEntity() { Name = role });
+            }
             return await _userManager.AddToRoleAsync(user, role);
         }
 

@@ -34,7 +34,7 @@ namespace ShopList.Controllers
             return Ok(await _productEntityService.Update(product));
         }
 
-        [Authorize(Roles ="ADMIN")]
+        [Authorize(Roles ="Administrator")]
         [HttpPost]
         public async Task<ObjectResult> CreateProduct([FromBody] AddProductRequest product)
         {
@@ -46,7 +46,7 @@ namespace ShopList.Controllers
             return Ok(await _productEntityService.Create(newProduct));
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Administrator")]
         [HttpDelete("{productId}")]
         public async Task<ObjectResult> DeleteProduct([FromRoute] int productId)
         {
