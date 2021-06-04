@@ -3,6 +3,7 @@ using ShopList.Services;
 using ShopList.Models.Database.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
+using ShopList.Models.Requests;
 
 namespace ShopList.Controllers
 {
@@ -11,10 +12,12 @@ namespace ShopList.Controllers
     public class ProductEntityController : ControllerBase
     {
         private readonly ProductEntityService _productEntityService;
+        private readonly UserService _userService;
 
-        public ProductEntityController(ProductEntityService productEntityService)
+        public ProductEntityController(ProductEntityService productEntityService, UserService userService)
         {
             _productEntityService = productEntityService;
+            _userService = userService;
         }
 
         [Authorize(Roles = "Normal")]
@@ -31,11 +34,16 @@ namespace ShopList.Controllers
             return Ok(await _productEntityService.Update(product));
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles ="ADMIN")]
         [HttpPost]
-        public async Task<ObjectResult> CreateProduct([FromBody] ProductEntity product)
+        public async Task<ObjectResult> CreateProduct([FromBody] AddProductRequest product)
         {
-            return Ok(await _productEntityService.Create(product));
+            ProductEntity newProduct = new()
+            { 
+                Name = product.Name,
+                Price = product.Price
+            };
+            return Ok(await _productEntityService.Create(newProduct));
         }
 
         [Authorize(Roles = "Admin")]
