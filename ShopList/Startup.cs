@@ -15,6 +15,8 @@ using ShopList.Repositories;
 using ShopList.Services;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using AutoMapper;
+using ShopList.Helpers;
 
 namespace ShopList
 {
@@ -77,13 +79,23 @@ namespace ShopList
 
             services.AddScoped<ProductEntityService>();
 
-            services.AddScoped<CartEntityRepository>();
+            //services.AddScoped<CartEntityRepository>();
 
-            services.AddScoped<CartEntityService>();
+            //services.AddScoped<CartEntityService>();
 
             services.AddScoped<UserRepository>();
 
             services.AddScoped<UserService>();
+
+            services.AddScoped<ReviewRepository>();
+
+            services.AddScoped<ReviewService>();
+
+            services.AddScoped<CategoryRepository>();
+
+            services.AddScoped<CategoryService>();
+
+            services.AddSingleton(new MapperConfiguration(p => p.AddProfile(new Mapping())).CreateMapper());
 
             services.AddControllers().AddNewtonsoftJson(x =>
                 x.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);

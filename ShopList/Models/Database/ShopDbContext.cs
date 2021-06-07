@@ -15,6 +15,9 @@ namespace ShopList.Models.Database
 
         public DbSet<ProductEntity> Products { get; set; }
         public DbSet<CartEntity> Cart { get; set; }
+        public DbSet<ReviewEntity> Review { get; set; }
+        public DbSet<PurchaseHistoryEntity> PurchaseHistory { get; set; }
+        public DbSet<CategoryEntity> Category { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -32,17 +35,30 @@ namespace ShopList.Models.Database
                 .HasForeignKey(ur => ur.RoleId)
                 .IsRequired();
 
-            modelBuilder.Entity<ProductEntity>()
-                .HasMany(cp => cp.CartProducts)
-                .WithOne(cp => cp.Product)
-                .HasForeignKey(p => p.Id)
-                .IsRequired();
+            //modelBuilder.Entity<ProductEntity>()
+            //    .HasMany(cp => cp.CartProducts)
+            //    .WithOne(cp => cp.Product)
+            //    .HasForeignKey(p => p.Id)
+            //    .IsRequired();
 
-            modelBuilder.Entity<CartEntity>()
-                .HasMany(cp => cp.CartProducts)
-                .WithOne(cp => cp.Cart)
-                .HasForeignKey(c => c.Id)
-                .IsRequired();
+            //modelBuilder.Entity<CartEntity>()
+            //    .HasMany(cp => cp.CartProducts)
+            //    .WithOne(cp => cp.Cart)
+            //    .HasForeignKey(c => c.Id)
+            //    .IsRequired();
+
+
+            //modelBuilder.Entity<CategoryEntity>()
+            //    .HasMany(cp => cp.CategoryProducts)
+            //    .WithOne(cp => cp.Category)
+            //    .HasForeignKey(c => c.Id)
+            //    .IsRequired();
+
+            //modelBuilder.Entity<ProductEntity>()
+            //    .HasMany(cp => cp.CartProducts)
+            //    .WithOne(p => p.Product)
+            //    .HasForeignKey(p => p.Id)
+            //    .IsRequired();
         }
     }
 }

@@ -67,7 +67,7 @@ namespace ShopList.Repositories
 
         public async Task<T> Update(T entity, bool commit = true)
         {
-            Table.Update(entity);
+            Table.Update(entity);   
 
             if (commit)
                 await Commit();

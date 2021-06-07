@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace ShopList.Models.Database.Entities
 {
-    [Table("cart")]
-    public class CartEntity : BaseEntity
+    [Table("category")]
+    public class CategoryEntity : BaseEntity
     {
-        [ForeignKey("UserId")]public UserEntity User { get; set; }
+        public string Name { get; set; }
+
         public List<ProductEntity> Products { get; set; }
     }
 }

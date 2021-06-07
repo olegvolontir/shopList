@@ -141,5 +141,9 @@ namespace ShopList.Services
             return Convert.ToBase64String(randomNumber);
         }
 
+        public async Task<List<UserEntity>> GetUsers()
+        {
+            return await _userRepository.GetUsers();
+        }
     }
 }

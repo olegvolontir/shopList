@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ShopList.Migrations
 {
-    public partial class AddedUsers : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -52,6 +52,43 @@ namespace ShopList.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "category",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DateModified = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CreatedBy = table.Column<int>(type: "int", nullable: false),
+                    ModifiedBy = table.Column<int>(type: "int", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_category", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "product",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Price = table.Column<float>(type: "real", nullable: false),
+                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DateModified = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CreatedBy = table.Column<int>(type: "int", nullable: false),
+                    ModifiedBy = table.Column<int>(type: "int", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_product", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -160,6 +197,129 @@ namespace ShopList.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "cart",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<int>(type: "int", nullable: true),
+                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DateModified = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CreatedBy = table.Column<int>(type: "int", nullable: false),
+                    ModifiedBy = table.Column<int>(type: "int", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_cart", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_cart_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "search_history",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ProductData = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UserId = table.Column<int>(type: "int", nullable: true),
+                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DateModified = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CreatedBy = table.Column<int>(type: "int", nullable: false),
+                    ModifiedBy = table.Column<int>(type: "int", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_search_history", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_search_history_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "CategoryEntityProductEntity",
+                columns: table => new
+                {
+                    CategoriesId = table.Column<int>(type: "int", nullable: false),
+                    ProductsId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CategoryEntityProductEntity", x => new { x.CategoriesId, x.ProductsId });
+                    table.ForeignKey(
+                        name: "FK_CategoryEntityProductEntity_category_CategoriesId",
+                        column: x => x.CategoriesId,
+                        principalTable: "category",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CategoryEntityProductEntity_product_ProductsId",
+                        column: x => x.ProductsId,
+                        principalTable: "product",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "review",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Content = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Rating = table.Column<float>(type: "real", nullable: false),
+                    ProductId = table.Column<int>(type: "int", nullable: true),
+                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DateModified = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CreatedBy = table.Column<int>(type: "int", nullable: false),
+                    ModifiedBy = table.Column<int>(type: "int", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_review", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_review_product_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "product",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "CartEntityProductEntity",
+                columns: table => new
+                {
+                    CartsId = table.Column<int>(type: "int", nullable: false),
+                    ProductsId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CartEntityProductEntity", x => new { x.CartsId, x.ProductsId });
+                    table.ForeignKey(
+                        name: "FK_CartEntityProductEntity_cart_CartsId",
+                        column: x => x.CartsId,
+                        principalTable: "cart",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CartEntityProductEntity_product_ProductsId",
+                        column: x => x.ProductsId,
+                        principalTable: "product",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -198,6 +358,31 @@ namespace ShopList.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_cart_UserId",
+                table: "cart",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CartEntityProductEntity_ProductsId",
+                table: "CartEntityProductEntity",
+                column: "ProductsId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CategoryEntityProductEntity_ProductsId",
+                table: "CategoryEntityProductEntity",
+                column: "ProductsId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_review_ProductId",
+                table: "review",
+                column: "ProductId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_search_history_UserId",
+                table: "search_history",
+                column: "UserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -218,7 +403,28 @@ namespace ShopList.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "CartEntityProductEntity");
+
+            migrationBuilder.DropTable(
+                name: "CategoryEntityProductEntity");
+
+            migrationBuilder.DropTable(
+                name: "review");
+
+            migrationBuilder.DropTable(
+                name: "search_history");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
+
+            migrationBuilder.DropTable(
+                name: "cart");
+
+            migrationBuilder.DropTable(
+                name: "category");
+
+            migrationBuilder.DropTable(
+                name: "product");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

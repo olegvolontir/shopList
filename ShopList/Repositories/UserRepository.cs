@@ -8,6 +8,7 @@ using ShopList.Models.Database.Entities;
 using ShopList.Models.Constants;
 using SignInResult = Microsoft.AspNetCore.Identity.SignInResult;
 using System;
+using System.Collections.Generic;
 
 namespace ShopList.Repositories
 {
@@ -76,6 +77,11 @@ namespace ShopList.Repositories
         {
             await _userManager.UpdateAsync(user);
             return user;
+        }
+
+        public async Task<List<UserEntity>> GetUsers()
+        {
+            return await _userManager.Users.ToListAsync();
         }
     }
 }

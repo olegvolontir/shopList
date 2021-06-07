@@ -10,8 +10,8 @@ using ShopList.Models.Database;
 namespace ShopList.Migrations
 {
     [DbContext(typeof(ShopDbContext))]
-    [Migration("20210513090803_AddedUsers")]
-    partial class AddedUsers
+    [Migration("20210607085537_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,36 @@ namespace ShopList.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.5")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("CartEntityProductEntity", b =>
+                {
+                    b.Property<int>("CartsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CartsId", "ProductsId");
+
+                    b.HasIndex("ProductsId");
+
+                    b.ToTable("CartEntityProductEntity");
+                });
+
+            modelBuilder.Entity("CategoryEntityProductEntity", b =>
+                {
+                    b.Property<int>("CategoriesId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CategoriesId", "ProductsId");
+
+                    b.HasIndex("ProductsId");
+
+                    b.ToTable("CategoryEntityProductEntity");
+                });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
@@ -129,9 +159,44 @@ namespace ShopList.Migrations
                     b.Property<int>("ModifiedBy")
                         .HasColumnType("int");
 
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
+                    b.HasIndex("UserId");
+
                     b.ToTable("cart");
+                });
+
+            modelBuilder.Entity("ShopList.Models.Database.Entities.CategoryEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CreatedBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ModifiedBy")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("category");
                 });
 
             modelBuilder.Entity("ShopList.Models.Database.Entities.ProductEntity", b =>
@@ -140,9 +205,6 @@ namespace ShopList.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int?>("CartEntityId")
-                        .HasColumnType("int");
 
                     b.Property<int>("CreatedBy")
                         .HasColumnType("int");
@@ -167,9 +229,80 @@ namespace ShopList.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CartEntityId");
-
                     b.ToTable("product");
+                });
+
+            modelBuilder.Entity("ShopList.Models.Database.Entities.PurchaseHistoryEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CreatedBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ModifiedBy")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ProductData")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("search_history");
+                });
+
+            modelBuilder.Entity("ShopList.Models.Database.Entities.ReviewEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CreatedBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ModifiedBy")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<float>("Rating")
+                        .HasColumnType("real");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("review");
                 });
 
             modelBuilder.Entity("ShopList.Models.Database.Entities.RoleEntity", b =>
@@ -301,6 +434,36 @@ namespace ShopList.Migrations
                     b.ToTable("AspNetUserRoles");
                 });
 
+            modelBuilder.Entity("CartEntityProductEntity", b =>
+                {
+                    b.HasOne("ShopList.Models.Database.Entities.CartEntity", null)
+                        .WithMany()
+                        .HasForeignKey("CartsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ShopList.Models.Database.Entities.ProductEntity", null)
+                        .WithMany()
+                        .HasForeignKey("ProductsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("CategoryEntityProductEntity", b =>
+                {
+                    b.HasOne("ShopList.Models.Database.Entities.CategoryEntity", null)
+                        .WithMany()
+                        .HasForeignKey("CategoriesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ShopList.Models.Database.Entities.ProductEntity", null)
+                        .WithMany()
+                        .HasForeignKey("ProductsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
                     b.HasOne("ShopList.Models.Database.Entities.RoleEntity", null)
@@ -337,11 +500,31 @@ namespace ShopList.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("ShopList.Models.Database.Entities.ProductEntity", b =>
+            modelBuilder.Entity("ShopList.Models.Database.Entities.CartEntity", b =>
                 {
-                    b.HasOne("ShopList.Models.Database.Entities.CartEntity", null)
-                        .WithMany("ListProducts")
-                        .HasForeignKey("CartEntityId");
+                    b.HasOne("ShopList.Models.Database.Entities.UserEntity", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("ShopList.Models.Database.Entities.PurchaseHistoryEntity", b =>
+                {
+                    b.HasOne("ShopList.Models.Database.Entities.UserEntity", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("ShopList.Models.Database.Entities.ReviewEntity", b =>
+                {
+                    b.HasOne("ShopList.Models.Database.Entities.ProductEntity", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId");
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("ShopList.Models.Database.Entities.UserRoleEntity", b =>
@@ -361,11 +544,6 @@ namespace ShopList.Migrations
                     b.Navigation("Role");
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("ShopList.Models.Database.Entities.CartEntity", b =>
-                {
-                    b.Navigation("ListProducts");
                 });
 
             modelBuilder.Entity("ShopList.Models.Database.Entities.RoleEntity", b =>

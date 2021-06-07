@@ -1,6 +1,9 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using ShopList.Models.Requests;
+using ShopList.Models.Responses;
 using ShopList.Services;
 
 namespace ShopList.Controllers
@@ -10,10 +13,12 @@ namespace ShopList.Controllers
     public class UserController : ControllerBase
     {
         private readonly UserService _userService;
+        private readonly IMapper _mapper;
 
-        public UserController(UserService userService)
+        public UserController(UserService userService, IMapper mapper)
         {
             _userService = userService;
+            _mapper = mapper;
         }
 
         [HttpPost("Register")]
@@ -41,5 +46,12 @@ namespace ShopList.Controllers
             return Ok(await _userService.RevokeRefreshToken(refreshTokenRequest.RefreshToken));
         }
 
+        [HttpGet]
+        public async Task<ObjectResult> GetUsers()
+        {
+            var users = await _userService.GetUsers();
+
+            return Ok(_mapper.Map<List<GetUserResponse>>(users));
+        }
     }
 }

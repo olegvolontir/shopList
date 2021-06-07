@@ -21,6 +21,13 @@ namespace ShopList.Controllers
         }
 
         [Authorize(Roles = "Normal")]
+        [HttpGet]
+        public async Task<ObjectResult> GetProducts()
+        {
+            return Ok(await _productEntityService.GetAll());
+        }
+
+        [Authorize(Roles = "Normal")]
         [HttpGet("{productId}")]
         public async Task<ObjectResult> GetById([FromRoute] int productId)
         {
