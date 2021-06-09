@@ -36,6 +36,7 @@ namespace ShopList.Services
                 Email = userRequest.Email
             };
 
+
             var result = await _userRepository.Register(user, userRequest.Password);
 
             if (!result.Succeeded)

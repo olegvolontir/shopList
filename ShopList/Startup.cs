@@ -17,6 +17,7 @@ using Newtonsoft.Json;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using AutoMapper;
 using ShopList.Helpers;
+using ShopList.HostedServices;
 
 namespace ShopList
 {
@@ -94,6 +95,8 @@ namespace ShopList
             services.AddScoped<CategoryRepository>();
 
             services.AddScoped<CategoryService>();
+
+            services.AddHostedService<SeedDatabaseHostedService>();
 
             services.AddSingleton(new MapperConfiguration(p => p.AddProfile(new Mapping())).CreateMapper());
 
