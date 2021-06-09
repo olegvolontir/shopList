@@ -9,6 +9,7 @@ using ShopList.Models.Constants;
 using SignInResult = Microsoft.AspNetCore.Identity.SignInResult;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 
 namespace ShopList.Repositories
 {
@@ -69,6 +70,15 @@ namespace ShopList.Repositories
         public async Task<List<UserEntity>> GetUsers()
         {
             return await _userManager.Users.ToListAsync();
+        }
+
+        public IQueryable<UserEntity> Get(Expression<Func<UserEntity, bool>> predicate = null)
+        {
+            if (predicate != null)
+                return _userManager.Users
+                    .Where(predicate);
+
+            return _userManager.Users;
         }
     }
 }

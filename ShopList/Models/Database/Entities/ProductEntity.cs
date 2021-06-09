@@ -9,6 +9,7 @@ namespace ShopList.Models.Database.Entities
     {
         public string Name { get; set; }
         public float Price { get; set; }
+        public float Discount { get; set; }
         public List<CartEntity> Carts { get; set; }
         public List<CategoryEntity> Categories { get; set; }
     }

@@ -17,9 +17,9 @@ namespace ShopList.Services
             BaseRepository = baseRepository;
         }
 
-        public async Task<T> Get(Expression<Func<T, bool>> predicate = null)
+        public IQueryable<T> Get(Expression<Func<T, bool>> predicate = null)
         {
-            return await BaseRepository.Get(predicate);
+            return BaseRepository.Get(predicate);
         }
 
         public async Task<List<T>> GetAll(Expression<Func<T, bool>> predicate = null)
@@ -39,7 +39,6 @@ namespace ShopList.Services
 
         public async Task<T> Create(T entity, bool commit = true)
         {
-
             return await BaseRepository.Create(entity, commit);
         }
 

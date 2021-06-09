@@ -16,9 +16,9 @@ namespace ShopList.Services
             _cartEntityRepository = cartEntityRepository;
         }
 
-        public async Task<List<CartEntity>> Search(int userId)
-        {
-            return await _cartEntityRepository.Search(userId);
-        }
+        //public async Task<List<CartEntity>> Search(int userId)
+        //{
+        //    return await _cartEntityRepository.Search(userId);
+        //}
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
@@ -31,11 +32,6 @@ namespace ShopList.Services
 
         public async Task<IdentityResult> RegisterUser(UserRegisterRequest userRequest, string role)
         {
-            var user = new UserEntity
-            {
-                UserName = userRequest.Username,
-                Email = userRequest.Email
-            };
 
             List<string> roleList = new()
             {
@@ -48,6 +44,19 @@ namespace ShopList.Services
             {
                 return null;
             }
+
+            CartEntity cart = null;
+            if(role.Equals(UserRoles.normal, StringComparison.OrdinalIgnoreCase))
+            {
+                cart = new CartEntity();
+            }
+            var user = new UserEntity
+            {
+                UserName = userRequest.Username,
+                Email = userRequest.Email,
+                Cart = cart
+            };
+
             var result = await _userRepository.Register(user, userRequest.Password);
 
             if (!result.Succeeded)
@@ -152,6 +161,11 @@ namespace ShopList.Services
             generator.GetBytes(randomNumber);
 
             return Convert.ToBase64String(randomNumber);
+        }
+
+        public IQueryable<UserEntity> Get(Expression<Func<UserEntity, bool>> predicate = null)
+        {
+            return _userRepository.Get(predicate);
         }
 
         public async Task<List<UserEntity>> GetUsers()

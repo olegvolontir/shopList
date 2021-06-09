@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\emasu\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\emasu\\.nuget\\packages"
+      "C:\\Users\\oovolontir\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\oovolontir\\.nuget\\packages"
     ]
   }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ShopList.Models.Database.Entities
 {
@@ -13,5 +14,6 @@ namespace ShopList.Models.Database.Entities
         public string RefreshToken { get; set; }
         public DateTime? RefreshTokenExpires { get; set; }
         public List<UserRoleEntity> UserRoles { get; set; }
+        [ForeignKey("CartId")] public CartEntity Cart { get; set; }
     }
 }

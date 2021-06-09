@@ -15,11 +15,11 @@ namespace ShopList.Repositories
         {         
         }
 
-        public async Task<List<CartEntity>> Search(int userId)
-        {
-            return await Table
-                .Where(c => c.User.Id == userId)
-                .ToListAsync();
-        }
+        //public async Task<List<CartEntity>> Search(int userId)
+        //{
+        //    return await Table
+        //        .Where(c => c.User.Id == userId)
+        //        .ToListAsync();
+        //}
     }
 }

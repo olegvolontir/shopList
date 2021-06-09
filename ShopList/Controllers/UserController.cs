@@ -8,6 +8,7 @@ using ShopList.Services;
 using ShopList.Models.Constants;
 using System.Linq;
 using System;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ShopList.Controllers
 {
@@ -54,6 +55,7 @@ namespace ShopList.Controllers
             return Ok(await _userService.RevokeRefreshToken(refreshTokenRequest.RefreshToken));
         }
 
+        [Authorize(Roles ="Administrator")]
         [HttpGet]
         public async Task<ObjectResult> GetUsers()
         {

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ShopList.Models.Database.Entities;
 using ShopList.Models.Requests;
 using ShopList.Services;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace ShopList.Controllers
 {
+    [Authorize(Roles = "Moderator")]
     [Route("api/category")]
     [ApiController]
     public class CategoryController : ControllerBase
@@ -24,7 +26,12 @@ namespace ShopList.Controllers
             _productEntityService = productEntityService;
         }
 
-        [Authorize(Roles = "Moderator")]
+        [HttpGet("GetCategories")]
+        public async Task<ObjectResult> GetCategories()
+        {
+            return Ok(await _categoryService.GetAll());
+        }
+
         [HttpPost]
         public async Task<ObjectResult> AddCategory([FromBody] AddCategoryRequest addCategoryRequest)
         {
@@ -36,26 +43,35 @@ namespace ShopList.Controllers
             return Ok(await _categoryService.Create(category));
         }
 
-        [Authorize(Roles = "Moderator")]
-        [HttpDelete]
+        [HttpDelete("Delete/{categoryId}")]
         public async Task<ObjectResult> DeleteCategory([FromRoute] int categoryId)
         {
-            var category = await _categoryService.Get(c => c.Id == categoryId);
+            var category = await _categoryService.Get(c => c.Id == categoryId).FirstOrDefaultAsync();
 
             return Ok(await _categoryService.Delete(category));
         }
 
-        [Authorize(Roles = "Moderator")]
-        [HttpPut]
-        public async Task<ObjectResult> AddProductToCategory([FromQuery]int productId, [FromQuery]int categoryId)
+        [HttpPut("AddProduct")]
+        public async Task<ObjectResult> AddProductToCategory([FromQuery] int productId, [FromQuery] int categoryId)
         {
-            var category = _categoryService.Get(c => c.Id == categoryId).Result;
-            var product = _productEntityService.Get(p=>p.Id == productId).Result;
-
-            if (category.Products == null)
-                category.Products = new();
+            var category = await _categoryService.Get(c => c.Id == categoryId).Include(c => c.Products).FirstOrDefaultAsync();
+            var product = await _productEntityService.Get(p => p.Id == productId).FirstOrDefaultAsync();
 
             category.Products.Add(product);
+
+            return Ok(await _categoryService.Update(category));
+        }
+
+        [HttpPut("DeleteProduct")]
+        public async Task<ObjectResult> DeleteProductFromCategory([FromQuery] int productId, [FromQuery] int categoryId)
+        {
+            var category = await _categoryService.Get(c => c.Id == categoryId).Include(c => c.Products).FirstOrDefaultAsync();
+            var product = await _productEntityService.Get(p => p.Id == productId).FirstOrDefaultAsync();
+
+            if (category.Products.Contains(product))
+            {
+                category.Products.Remove(product);
+            }
 
             return Ok(await _categoryService.Update(category));
         }

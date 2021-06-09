@@ -1,219 +1,73 @@
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ref\ShopList.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.pdb
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\appsettings.Development.json
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\appsettings.json
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\ShopList.exe
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\ShopList.deps.json
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\ShopList.runtimeconfig.json
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\ShopList.runtimeconfig.dev.json
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\ShopList.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\ref\ShopList.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\ShopList.pdb
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Humanizer.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.Identity.Client.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.OpenApi.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Newtonsoft.Json.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\System.Runtime.Caching.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.AssemblyInfoInputs.cache
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.AssemblyInfo.cs
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.csproj.CoreCompileInputs.cache
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\staticwebassets\ShopList.StaticWebAssets.Manifest.cache
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\staticwebassets\ShopList.StaticWebAssets.xml
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\scopedcss\bundle\ShopList.styles.css
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.RazorTargetAssemblyInfo.cache
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.csproj.CopyComplete
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.genruntimeconfig.cache
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.csprojAssemblyReference.cache
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\AutoMapper.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
-C:\Users\emasu\Desktop\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\appsettings.Development.json
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\appsettings.json
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\ShopList.exe
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\ShopList.deps.json
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\ShopList.runtimeconfig.json
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\ShopList.runtimeconfig.dev.json
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\ShopList.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\ref\ShopList.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\ShopList.pdb
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\AutoMapper.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Humanizer.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.Identity.Client.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Microsoft.OpenApi.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Newtonsoft.Json.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\System.Runtime.Caching.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\obj\Debug\net5.0\ShopList.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\obj\Debug\net5.0\ShopList.AssemblyInfoInputs.cache
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\obj\Debug\net5.0\ShopList.AssemblyInfo.cs
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\obj\Debug\net5.0\ShopList.csproj.CoreCompileInputs.cache
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\obj\Debug\net5.0\ShopList.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\obj\Debug\net5.0\ShopList.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\obj\Debug\net5.0\staticwebassets\ShopList.StaticWebAssets.Manifest.cache
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\obj\Debug\net5.0\staticwebassets\ShopList.StaticWebAssets.xml
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\obj\Debug\net5.0\scopedcss\bundle\ShopList.styles.css
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\obj\Debug\net5.0\ShopList.RazorTargetAssemblyInfo.cache
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\obj\Debug\net5.0\ShopList.csproj.CopyComplete
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\obj\Debug\net5.0\ShopList.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\obj\Debug\net5.0\ref\ShopList.dll
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\obj\Debug\net5.0\ShopList.pdb
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\obj\Debug\net5.0\ShopList.genruntimeconfig.cache
-C:\Users\oovolontir\source\repos\ShopMe\ShopList\ShopList\obj\Debug\net5.0\ShopList.csprojAssemblyReference.cache
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\appsettings.Development.json
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\appsettings.json
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\ShopList.exe
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\ShopList.deps.json
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\ShopList.runtimeconfig.json
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\ShopList.runtimeconfig.dev.json
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\ShopList.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\ref\ShopList.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\ShopList.pdb
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\AutoMapper.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Humanizer.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.Identity.Client.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Microsoft.OpenApi.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Newtonsoft.Json.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\System.Runtime.Caching.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.csprojAssemblyReference.cache
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.AssemblyInfoInputs.cache
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.AssemblyInfo.cs
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.csproj.CoreCompileInputs.cache
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\staticwebassets\ShopList.StaticWebAssets.Manifest.cache
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\staticwebassets\ShopList.StaticWebAssets.xml
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\scopedcss\bundle\ShopList.styles.css
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.RazorTargetAssemblyInfo.cache
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.csproj.CopyComplete
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ref\ShopList.dll
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.pdb
-C:\Users\emasu\Desktop\Facultate-Anul 2_Sem II\DAC\Proiect-.Net\shopList\ShopList\obj\Debug\net5.0\ShopList.genruntimeconfig.cache
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\appsettings.json
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\ShopList.exe
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\ShopList.deps.json
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\ShopList.runtimeconfig.json
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\ShopList.runtimeconfig.dev.json
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\ShopList.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\ref\ShopList.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\ShopList.pdb
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Humanizer.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\System.Runtime.Caching.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\obj\Debug\net5.0\ShopList.csprojAssemblyReference.cache
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\obj\Debug\net5.0\ShopList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\obj\Debug\net5.0\ShopList.AssemblyInfoInputs.cache
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\obj\Debug\net5.0\ShopList.AssemblyInfo.cs
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\obj\Debug\net5.0\ShopList.csproj.CoreCompileInputs.cache
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\obj\Debug\net5.0\ShopList.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\obj\Debug\net5.0\ShopList.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\obj\Debug\net5.0\staticwebassets\ShopList.StaticWebAssets.Manifest.cache
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\obj\Debug\net5.0\staticwebassets\ShopList.StaticWebAssets.xml
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\obj\Debug\net5.0\scopedcss\bundle\ShopList.styles.css
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\obj\Debug\net5.0\ShopList.RazorTargetAssemblyInfo.cache
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\obj\Debug\net5.0\ShopList.csproj.CopyComplete
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\obj\Debug\net5.0\ShopList.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\obj\Debug\net5.0\ref\ShopList.dll
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\obj\Debug\net5.0\ShopList.pdb
+C:\Users\oovolontir\source\repos\ShopMe\shopList\ShopList\obj\Debug\net5.0\ShopList.genruntimeconfig.cache

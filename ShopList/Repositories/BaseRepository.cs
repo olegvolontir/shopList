@@ -20,14 +20,12 @@ namespace ShopList.Repositories
             Table = DbContext.Set<T>();
         }
 
-        public async Task<T> Get(Expression<Func<T, bool>> predicate = null)
+        public IQueryable<T> Get(Expression<Func<T, bool>> predicate = null)
         {
             if (predicate != null)
-                return await Table
-                    .Where(predicate)
-                    .FirstOrDefaultAsync();
+                return Table.Where(predicate);
 
-            return await Table.FirstOrDefaultAsync();
+            return Table;
         }
 
         public async Task<List<T>> GetAll(Expression<Func<T, bool>> predicate = null)
