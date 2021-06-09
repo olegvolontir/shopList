@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 using ShopList.Models.Requests;
 using ShopList.Models.Responses;
 using ShopList.Services;
+using ShopList.Models.Constants;
+using System.Linq;
+using System;
 
 namespace ShopList.Controllers
 {
@@ -25,7 +28,12 @@ namespace ShopList.Controllers
         public async Task<ObjectResult> Register([FromBody] UserRegisterRequest userRequest,
             [FromQuery] string role)
         {
-            return Ok(await _userService.RegisterUser(userRequest, role));
+            var result = await _userService.RegisterUser(userRequest, role);
+            if (result ==null)
+            {
+                return BadRequest("Invalid typed role!");
+            }
+            return Ok(result);
         }
 
         [HttpPost("Login")]

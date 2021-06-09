@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using ShopList.Models.Constants;
 using ShopList.Models.Database.Entities;
 using ShopList.Models.Requests;
 using ShopList.Models.Responses;
@@ -36,7 +37,17 @@ namespace ShopList.Services
                 Email = userRequest.Email
             };
 
+            List<string> roleList = new()
+            {
+                UserRoles.administrator,
+                UserRoles.moderator,
+                UserRoles.normal,
+            };
 
+            if (!roleList.Any(r => r.Equals(role, StringComparison.OrdinalIgnoreCase)))
+            {
+                return null;
+            }
             var result = await _userRepository.Register(user, userRequest.Password);
 
             if (!result.Succeeded)
@@ -50,6 +61,7 @@ namespace ShopList.Services
             return result;
         }
 
+       
         public async Task<LoginResponse> Login(string username, string password)
         {
             var result = await _userRepository.Login(username, password);
