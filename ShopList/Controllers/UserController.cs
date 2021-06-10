@@ -9,6 +9,8 @@ using ShopList.Models.Constants;
 using System.Linq;
 using System;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
+using ShopList.Models.Database.Entities;
 
 namespace ShopList.Controllers
 {
@@ -30,7 +32,7 @@ namespace ShopList.Controllers
             [FromQuery] string role)
         {
             var result = await _userService.RegisterUser(userRequest, role);
-            if (result ==null)
+            if (result == null)
             {
                 return BadRequest("Invalid typed role!");
             }
@@ -55,13 +57,35 @@ namespace ShopList.Controllers
             return Ok(await _userService.RevokeRefreshToken(refreshTokenRequest.RefreshToken));
         }
 
-        [Authorize(Roles ="Administrator")]
+        [Authorize(Roles = "Administrator")]
         [HttpGet]
         public async Task<ObjectResult> GetUsers()
         {
             var users = await _userService.GetUsers();
 
             return Ok(_mapper.Map<List<GetUserResponse>>(users));
+        }
+
+        [Authorize(Roles = "Administrator")]
+        [HttpPut("UpdateUser")]
+        public async Task<ObjectResult> UpdateUser([FromBody] UpdateUserRequest request)
+        {
+
+            var user = await _userService.Get(u => u.Id == request.Id).Include(u => u.UserRoles).FirstOrDefaultAsync();
+            if (!string.IsNullOrEmpty(request.Username))
+            {
+                user.UserName = request.Username;
+            }
+            if (!string.IsNullOrEmpty(request.PhoneNumber))
+            {
+                user.PhoneNumber = request.PhoneNumber;
+            }
+            if (!string.IsNullOrEmpty(request.Email))
+            {
+                user.Email = request.Email;
+            }
+            return Ok(await _userService.Update(user,request.Role));
+
         }
     }
 }

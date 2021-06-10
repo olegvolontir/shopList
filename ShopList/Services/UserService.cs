@@ -46,7 +46,7 @@ namespace ShopList.Services
             }
 
             CartEntity cart = null;
-            if(role.Equals(UserRoles.normal, StringComparison.OrdinalIgnoreCase))
+            if (role.Equals(UserRoles.normal, StringComparison.OrdinalIgnoreCase))
             {
                 cart = new CartEntity();
             }
@@ -70,7 +70,7 @@ namespace ShopList.Services
             return result;
         }
 
-       
+
         public async Task<LoginResponse> Login(string username, string password)
         {
             var result = await _userRepository.Login(username, password);
@@ -172,5 +172,15 @@ namespace ShopList.Services
         {
             return await _userRepository.GetUsers();
         }
+
+
+        public async Task<UserEntity> Update(UserEntity user, string role)
+        {
+            var result = await _userRepository.UpdateUser(user);
+           await _userRepository.AddRoleToUser(user, role);
+            return result;
+        }
+
+
     }
 }
