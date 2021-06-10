@@ -29,17 +29,19 @@ namespace ShopList.Controllers
         [HttpGet("GetCategories")]
         public async Task<ObjectResult> GetCategories()
         {
-            return Ok(await _categoryService.GetAll());
+            return Ok(await _categoryService.Get().ToListAsync());
         }
 
         [HttpPost]
         public async Task<ObjectResult> AddCategory([FromBody] AddCategoryRequest addCategoryRequest)
         {
+            if (string.IsNullOrEmpty(addCategoryRequest.Name))
+                return BadRequest("The string is null or empty!");
+
             var category = new CategoryEntity()
             {
                 Name = addCategoryRequest.Name
             };
-
             return Ok(await _categoryService.Create(category));
         }
 
@@ -75,5 +77,6 @@ namespace ShopList.Controllers
 
             return Ok(await _categoryService.Update(category));
         }
+        
     }
 }

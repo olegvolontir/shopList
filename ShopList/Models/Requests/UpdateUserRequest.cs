@@ -15,7 +15,7 @@ namespace ShopList.Models.Requests
 
         public string PhoneNumber { get; set; }
 
-        public string Role { get; set; }
+        public List<string> Roles { get; set; }
 
     }
 }

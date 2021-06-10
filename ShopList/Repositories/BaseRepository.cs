@@ -28,16 +28,6 @@ namespace ShopList.Repositories
             return Table;
         }
 
-        public async Task<List<T>> GetAll(Expression<Func<T, bool>> predicate = null)
-        {
-            if (predicate != null)
-                return await Table
-                    .Where(predicate)
-                    .ToListAsync();
-
-            return await Table.ToListAsync();
-        }
-
         public async Task<int> CountAll(Expression<Func<T, bool>> predicate = null)
         {
             if (predicate != null)

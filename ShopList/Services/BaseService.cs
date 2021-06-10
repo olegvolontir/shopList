@@ -22,10 +22,7 @@ namespace ShopList.Services
             return BaseRepository.Get(predicate);
         }
 
-        public async Task<List<T>> GetAll(Expression<Func<T, bool>> predicate = null)
-        {
-            return await BaseRepository.GetAll(predicate);
-        }
+       
 
         public async Task<int> CountAll(Expression<Func<T, bool>> predicate = null)
         {

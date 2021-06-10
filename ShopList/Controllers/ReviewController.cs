@@ -29,7 +29,7 @@ namespace ShopList.Controllers
         [HttpGet("{productId}")]
         public async Task<ObjectResult> GetReviews([FromRoute] int productId)
         {
-            return Ok(await _reviewService.GetAll(r => r.Product.Id == productId));
+            return Ok(await _reviewService.Get(r => r.Product.Id == productId).ToListAsync());
         }
 
         [Authorize(Roles = "Normal")]

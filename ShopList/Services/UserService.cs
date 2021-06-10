@@ -174,10 +174,17 @@ namespace ShopList.Services
         }
 
 
-        public async Task<UserEntity> Update(UserEntity user, string role)
+        public async Task<UserEntity> Update(UserEntity user, List<string> roles)
         {
             var result = await _userRepository.UpdateUser(user);
-           await _userRepository.AddRoleToUser(user, role);
+            if(roles.Any())
+            {
+                user.UserRoles.Clear();
+                foreach(var role in roles)
+                {
+                    await _userRepository.AddRoleToUser(user, role);
+                }
+            }
             return result;
         }
 

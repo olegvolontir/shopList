@@ -72,19 +72,11 @@ namespace ShopList.Controllers
         {
 
             var user = await _userService.Get(u => u.Id == request.Id).Include(u => u.UserRoles).FirstOrDefaultAsync();
-            if (!string.IsNullOrEmpty(request.Username))
-            {
-                user.UserName = request.Username;
-            }
-            if (!string.IsNullOrEmpty(request.PhoneNumber))
-            {
-                user.PhoneNumber = request.PhoneNumber;
-            }
-            if (!string.IsNullOrEmpty(request.Email))
-            {
-                user.Email = request.Email;
-            }
-            return Ok(await _userService.Update(user,request.Role));
+
+            user.UserName = !string.IsNullOrEmpty(request.Username) ? request.Username : user.UserName;
+            user.PhoneNumber = !string.IsNullOrEmpty(request.PhoneNumber) ? request.PhoneNumber : user.PhoneNumber;
+            user.Email = !string.IsNullOrEmpty(request.Email) ? request.Email : user.Email;
+            return Ok(await _userService.Update(user, request.Roles));
 
         }
     }

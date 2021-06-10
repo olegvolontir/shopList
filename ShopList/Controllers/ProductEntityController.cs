@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using ShopList.Models.Requests;
 using ShopList.Helpers;
 using Microsoft.EntityFrameworkCore;
+using ShopList.Filters;
 
 namespace ShopList.Controllers
 {
@@ -23,12 +24,13 @@ namespace ShopList.Controllers
             _userService = userService;
             _productEntityService = productEntityService;
         }
-
+        
+        [ProductFilter]
         [Authorize(Roles = "Normal")]
         [HttpGet]
         public async Task<ObjectResult> GetProducts()
         {
-            return Ok(await _productEntityService.GetAll());
+            return Ok(await _productEntityService.GetProducts());
         }
 
         [Authorize(Roles = "Normal")]
@@ -44,9 +46,9 @@ namespace ShopList.Controllers
         {
             ProductEntity product = await _productEntityService.Get(p => p.Id == updateProductRequest.Id).FirstOrDefaultAsync();
 
-            product.Name = updateProductRequest.Name;
-            product.Price = updateProductRequest.Price;
-            product.Discount = updateProductRequest.Discount;
+            product.Name = !string.IsNullOrEmpty(updateProductRequest.Name) ? updateProductRequest.Name : product.Name;
+            product.Price = updateProductRequest.Price == 0 ? product.Price : updateProductRequest.Price;
+            product.Discount = updateProductRequest.Discount == 0 ? product.Discount : updateProductRequest.Discount;
 
             return Ok(await _productEntityService.Update(product));
         }
@@ -72,7 +74,7 @@ namespace ShopList.Controllers
             return Ok(await _productEntityService.Delete(result));
         }
 
-        [Authorize(Roles ="Normal")]
+        [Authorize(Roles = "Normal")]
         [HttpPut("AddToCart/{productId}")]
         public async Task<ObjectResult> AddToCart([FromRoute] int productId)
         {
