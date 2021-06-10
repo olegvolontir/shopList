@@ -80,10 +80,6 @@ namespace ShopList
 
             services.AddScoped<ProductEntityService>();
 
-            //services.AddScoped<CartEntityRepository>();
-
-            //services.AddScoped<CartEntityService>();
-
             services.AddScoped<UserRepository>();
 
             services.AddScoped<UserService>();

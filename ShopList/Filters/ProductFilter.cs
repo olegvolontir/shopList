@@ -35,8 +35,8 @@ namespace ShopList.Filters
 
             if (query["category"].ToList() != null  )
             {
-                var categories = query["category"].ToList();
-                param.Categories = categories;
+                var category = query["category"];
+                param.Category = category;
             }
             context.HttpContext.Items.Add("filter", param);
         }

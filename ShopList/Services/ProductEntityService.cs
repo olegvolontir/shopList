@@ -30,9 +30,18 @@ namespace ShopList.Services
 
         public async Task<List<ProductEntity>> GetProducts()
         {
-            var result = await _productEntityRepository.Get(p => p.Categories.Select(c => c.Name).Intersect(_productFilterParameters.Categories).Any() == true).ToListAsync();
-            return result;
-        }
+            if (!string.IsNullOrEmpty(_productFilterParameters.Category))
+            {
+                return await _productEntityRepository.Get(p => p.Categories
+            .Select(c => c.Name)
+            .Contains(_productFilterParameters.Category) 
+            && p.Price >= _productFilterParameters.MinPrice
+            && p.Price <= _productFilterParameters.MaxPrice)
+            .Include(p => p.Categories)
+            .ToListAsync();
+            }
 
+            return await _productEntityRepository.Get().Include(p=>p.Categories).ToListAsync();
+        }
     }
 }

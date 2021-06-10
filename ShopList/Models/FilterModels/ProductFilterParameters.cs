@@ -10,8 +10,8 @@ namespace ShopList.Models.FilterModels
     {
         public int MinPrice { get; set; } = 0;
 
-        public int MaxPrice { get; set; }
+        public int MaxPrice { get; set; } = int.MaxValue;
 
-        public List<string> Categories { get; set; }
+        public string Category{ get; set; }
     }
 }

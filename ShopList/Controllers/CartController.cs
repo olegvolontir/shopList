@@ -27,7 +27,7 @@ namespace ShopList.Controllers
             _productEntityService = productEntityService;
         }
 
-        [HttpGet("GetCartContent")]
+        [HttpGet("GetContent")]
         public async Task<ObjectResult> GetCartContent()
         {
             var user = await _userService.Get(u => u.Id == User.GetUserId())
@@ -50,7 +50,7 @@ namespace ShopList.Controllers
         }
 
 
-        [HttpPut("{productId}")]
+        [HttpPut("DeleteProduct/{productId}")]
         public async Task<ObjectResult> DeleteFromCart([FromRoute] int productId)
         {
             var user = await _userService.Get(u => u.Id == User.GetUserId()).Include(u => u.Cart.Products).FirstOrDefaultAsync();

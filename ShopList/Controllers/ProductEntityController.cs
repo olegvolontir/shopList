@@ -7,6 +7,9 @@ using ShopList.Models.Requests;
 using ShopList.Helpers;
 using Microsoft.EntityFrameworkCore;
 using ShopList.Filters;
+using AutoMapper;
+using System.Collections.Generic;
+using ShopList.Models.Responses;
 
 namespace ShopList.Controllers
 {
@@ -17,31 +20,43 @@ namespace ShopList.Controllers
         private readonly ProductEntityService _productEntityService;
         private readonly CartEntityService _cartEntityService;
         private readonly UserService _userService;
+        private readonly IMapper _mapper;
 
-        public ProductEntityController(ProductEntityService productEntityService, CartEntityService cartEntityService, UserService userService)
+        public ProductEntityController
+            (
+            ProductEntityService productEntityService,
+            CartEntityService cartEntityService,
+            UserService userService,
+            IMapper mapper
+            )
         {
             _cartEntityService = cartEntityService;
             _userService = userService;
             _productEntityService = productEntityService;
+            _mapper = mapper;
         }
         
         [ProductFilter]
         [Authorize(Roles = "Normal")]
-        [HttpGet]
+        [HttpGet("Get")]
         public async Task<ObjectResult> GetProducts()
         {
-            return Ok(await _productEntityService.GetProducts());
+            var q = await _productEntityService.GetProducts();
+
+
+            var res = _mapper.Map<List<GetProductResponse>>(q);
+            return Ok(res);
         }
 
         [Authorize(Roles = "Normal")]
-        [HttpGet("{productId}")]
+        [HttpGet("Get/{productId}")]
         public async Task<ObjectResult> GetById([FromRoute] int productId)
         {
-            return Ok(await _productEntityService.Get(p => p.Id == productId).FirstOrDefaultAsync());
+            return Ok(_mapper.Map<GetProductResponse>(await _productEntityService.Get(p => p.Id == productId).Include(p => p.Categories).FirstOrDefaultAsync()));
         }
 
         [Authorize(Roles = "Moderator")]
-        [HttpPut]
+        [HttpPut("Update")]
         public async Task<ObjectResult> UpdateProduct([FromBody] UpdateProductRequest updateProductRequest)
         {
             ProductEntity product = await _productEntityService.Get(p => p.Id == updateProductRequest.Id).FirstOrDefaultAsync();
@@ -65,8 +80,8 @@ namespace ShopList.Controllers
             return Ok(await _productEntityService.Create(newProduct));
         }
 
-        [Authorize(Roles = "Administrator")]
-        [HttpDelete("{productId}")]
+        [Authorize(Roles = "Moderator")]
+        [HttpDelete("Delete/{productId}")]
         public async Task<ObjectResult> DeleteProduct([FromRoute] int productId)
         {
             var result = await _productEntityService.Get(p => p.Id == productId).FirstOrDefaultAsync();

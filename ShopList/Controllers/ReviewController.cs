@@ -26,14 +26,14 @@ namespace ShopList.Controllers
         }
 
         [Authorize(Roles = "Normal,Moderator")]
-        [HttpGet("{productId}")]
+        [HttpGet("Get/{productId}")]
         public async Task<ObjectResult> GetReviews([FromRoute] int productId)
         {
             return Ok(await _reviewService.Get(r => r.Product.Id == productId).ToListAsync());
         }
 
         [Authorize(Roles = "Normal")]
-        [HttpDelete("{reviewId}")]
+        [HttpDelete("Delete/{reviewId}")]
         public async Task<ObjectResult> DeleteReview([FromRoute] int reviewId)
         {
             var product = await _reviewService.Get(r => r.Id == reviewId).FirstOrDefaultAsync();
@@ -42,7 +42,7 @@ namespace ShopList.Controllers
         }
 
         [Authorize(Roles = "Normal")]
-        [HttpPost]
+        [HttpPost("Post")]
         public async Task<ObjectResult> PostReview([FromBody] AddReviewRequest reviewRequest)
         {
             ProductEntity product = await _productEntityService.Get(p => p.Id == reviewRequest.ProductId).FirstOrDefaultAsync();
@@ -55,6 +55,18 @@ namespace ShopList.Controllers
             };
 
             return Ok(await _reviewService.Create(review));
+        }
+
+        [Authorize(Roles = "Normal")]
+        [HttpPut("Update")]
+        public async Task<ObjectResult> UpdateReview([FromBody] UpdateReviewRequest updateReviewRequest)
+        {
+            var review = await _reviewService.Get(r => r.Id == updateReviewRequest.Id).FirstOrDefaultAsync();
+
+            review.Content = updateReviewRequest.Content ?? review.Content;
+            review.Rating = updateReviewRequest.Rating != 0 ? updateReviewRequest.Rating : review.Rating;
+
+            return Ok(await _reviewService.Update(review));
         }
     }
 }

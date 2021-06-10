@@ -26,13 +26,13 @@ namespace ShopList.Controllers
             _productEntityService = productEntityService;
         }
 
-        [HttpGet("GetCategories")]
+        [HttpGet("GetAll")]
         public async Task<ObjectResult> GetCategories()
         {
             return Ok(await _categoryService.Get().ToListAsync());
         }
 
-        [HttpPost]
+        [HttpPost("Add")]
         public async Task<ObjectResult> AddCategory([FromBody] AddCategoryRequest addCategoryRequest)
         {
             if (string.IsNullOrEmpty(addCategoryRequest.Name))
