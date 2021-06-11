@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\shopList\\ShopList\\ShopList.csproj": {}
+    "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\ShopList\\ShopList\\ShopList.csproj": {}
   },
   "projects": {
-    "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\shopList\\ShopList\\ShopList.csproj": {
+    "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\ShopList\\ShopList\\ShopList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\shopList\\ShopList\\ShopList.csproj",
+        "projectUniqueName": "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\ShopList\\ShopList\\ShopList.csproj",
         "projectName": "ShopList",
-        "projectPath": "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\shopList\\ShopList\\ShopList.csproj",
+        "projectPath": "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\ShopList\\ShopList\\ShopList.csproj",
         "packagesPath": "C:\\Users\\oovolontir\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\shopList\\ShopList\\obj\\",
+        "outputPath": "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\ShopList\\ShopList\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\oovolontir\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -101,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }

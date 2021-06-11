@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yaXv+mQTBUwK+xpGxljFqZ8HxxLsKNBsgdUmjqK1YCoYrJjXsS4qAnYNk6Nx7hGxYZQ15sHxAkquMzgHhIMIDw==",
+  "dgSpecHash": "pWEo9AnQStRizFmGA4Wk5zU8khAyoO7aBAnYeptWgObMbfxUQbS3Pctx8AJzHuA1rKIwK1Z5qIht+hLkuHUMyg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\shopList\\ShopList\\ShopList.csproj",
+  "projectFilePath": "C:\\Users\\oovolontir\\source\\repos\\ShopMe\\ShopList\\ShopList\\ShopList.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\oovolontir\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\oovolontir\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
